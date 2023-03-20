@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Sign In</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f1f1f1;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .card {
+        width: 400px;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        padding: 20px;
+      }
+
+      .card h2 {
+        text-align: center;
+        color: #333;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        color: #666;
+      }
+
+      input[type=email], input[type=password] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: none;
+        border-bottom: 1px solid #ccc;
+        font-size: 16px;
+        color: #333;
+        background-color: #f1f1f1;
+      }
+
+      input[type=email]:focus, input[type=password]:focus {
+        outline: none;
+        border-bottom: 1px solid #4CAF50;
+      }
+
+      input[type=submit] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+      }
+
+      input[type=submit]:hover {
+        background-color: #45a049;
+      }
+
+      .signup {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .signup a {
+        color: #666;
+        text-decoration: none;
+      }
+
+      .signup a:hover {
+        text-decoration: underline;
+      }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  </head>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <% if(typeof alert != 'undefined') { %>
+      <% alert.forEach(function(error) { %>
+          <div class="alert alert-warning alert-dismissible fade show" role="alert">
+              <%= error %>
+              <!-- <button type="button" class="btn-close" aria-label="Close"></button> -->
+              <button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+      <% }) %>
+  <% } %> 
+
+
+    <div class="container">
+      <div class="card">
+        <h2>Sign In</h2>
+        <form action="/signin" method="post">
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email">
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password">
+          </div>
+
+          <input type="submit" value="Sign In">
+        </form>
+
+        <div class="signup">
+          Don't have an account? <a href="#">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

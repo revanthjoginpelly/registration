@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>User Info</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f1f1f1;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .card {
+        width: 400px;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        padding: 20px;
+      }
+
+      .card h2 {
+        text-align: center;
+        color: #333;
+      }
+
+      .user-info {
+        margin-top: 20px;
+      }
+
+      .user-info p {
+        margin-bottom: 10px;
+        color: #666;
+      }
+
+      .user-info p span {
+        font-weight: bold;
+        margin-right: 10px;
+      }
+
+      .logout {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .logout a {
+        color: #666;
+        text-decoration: none;
+      }
+
+      .logout a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+
+
+
+  <body>
+    <div class="container">
+      <div class="card">
+        <h2>User Info</h2>
+        <div class="user-info">
+          
+                <p><span>Name:</span><%= user_name %></p>
+            <p><span>Email:</span> <%= user_email %></p>
+            <p><span>Age:</span> <%= age %></p>
+            <p><span>Batch:</span> <%= batch %></p>
+
+        </div>
+
+        <div class="logout">
+          <a href="/logout">Logout</a>
+        </div>
+      </div>
+    </div>
+  </body>
+
+
+
+</html>

@@ -1,0 +1,82 @@
+/* Reset default browser styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Set global styles */
+  body {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f7f7f7;
+    background-image: url('https://unsplash.com/photos/n7a2OJDSZns');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* Style navigation menu */
+  nav {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+  }
+  nav li {
+    margin-right: 20px;
+  }
+  nav a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  /* Style header section */
+  header {
+    text-align: center;
+    padding: 50px 0;
+  }
+  header h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  header p {
+    font-size: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Style main content section */
+  main {
+    padding: 50px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  main h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  main ul {
+    list-style: none;
+    margin-bottom: 30px;
+  }
+  main li {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  main p {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
